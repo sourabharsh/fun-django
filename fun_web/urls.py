@@ -19,6 +19,5 @@ from django.contrib.auth  import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('change_password/', auth_views.PasswordChangeView.as_view())
-
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
